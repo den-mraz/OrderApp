@@ -8,7 +8,7 @@
     <!--DASHBOARD -->
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="net.denis.choriapp.ui.fragment.dashboard.DashboardFragment"
+        android:name="net.denis.orderapp.ui.fragment.dashboard.DashboardFragment"
         android:label="Заказы"
         tools:layout="@layout/fragment_dashboard">
         <action
@@ -28,7 +28,7 @@
     <!--ARCHIVE -->
     <fragment
         android:id="@+id/archiveFragment"
-        android:name="net.denis.choriapp.ui.fragment.archive.ArchiveFragment"
+        android:name="net.denis.orderapp.ui.fragment.archive.ArchiveFragment"
         android:label="Архив"
         tools:layout="@layout/fragment_archive" >
         <action
@@ -42,7 +42,7 @@
     <!--CREATE NEW ORDER -->
     <fragment
         android:id="@+id/createNewOrderFragment"
-        android:name="net.denis.choriapp.ui.fragment.order.createNewOrder.CreateNewOrderFragment"
+        android:name="net.denis.orderapp.ui.fragment.order.createNewOrder.CreateNewOrderFragment"
         android:label="Добавление нового заказа"
         tools:layout="@layout/fragment_create_new_order" >
         <action
@@ -53,7 +53,7 @@
     <!-- UPDATE ORDERS -->
     <fragment
         android:id="@+id/updateOrderFragment"
-        android:name="net.denis.choriapp.ui.fragment.order.updateOrder.UpdateOrderFragment"
+        android:name="net.denis.orderapp.ui.fragment.order.updateOrder.UpdateOrderFragment"
         android:label="Редактирование"
         tools:layout="@layout/fragment_update_order" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/openOrderFromArchiveFragment"
-        android:name="net.denis.choriapp.ui.fragment.order.OpenOrderFromArchiveFragment"
+        android:name="net.denis.orderapp.ui.fragment.order.OpenOrderFromArchiveFragment"
         android:label="OpenOrderFromArchiveFragment" >
         <action
             android:id="@+id/action_openOrderFromArchiveFragment_to_archiveFragment"

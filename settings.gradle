@@ -15,6 +15,6 @@ dependencyResolutionManagement {
 
 
 
-rootProject.name = "ChoriApp"
+rootProject.name = "OrderApp"
 include ':app'
 include ':Data'
