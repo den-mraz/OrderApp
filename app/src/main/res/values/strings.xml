@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ChoriApp</string>
+    <string name="btn_save_order">Принять заказ</string>
+    <string name="guarantee">Гарантия</string>
+    <string name="amount">Сумма</string>
+    <string name="prepayment">Предоплата</string>
+    <string name="note">Заметка</string>
+    <string name="corporation">Организация</string>
+    <string name="phone_number">Телефон</string>
+    <string name="customer_name">ФИО заказчика</string>
+    <string name="product_name">Изделие</string>
+    <string name="btn_update_order">Обновить</string>
+    <string name="Dashboard">Заказы</string>
+    <string name="Archive">Архив</string>
+    <string name="dateStart">Дата приёма</string>
+</resources>

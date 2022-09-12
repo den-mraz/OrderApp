@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigator"
+    app:startDestination="@id/dashboardFragment">
+
+    <!--DASHBOARD -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="net.denis.choriapp.ui.fragment.dashboard.DashboardFragment"
+        android:label="Заказы"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_createNewOrderFragment"
+            app:destination="@id/createNewOrderFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_archiveFragment"
+            app:destination="@id/archiveFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_updateOrderFragment"
+            app:destination="@id/updateOrderFragment" />
+        <argument
+            android:name="order"
+            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+    </fragment>
+
+    <!--ARCHIVE -->
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="net.denis.choriapp.ui.fragment.archive.ArchiveFragment"
+        android:label="Архив"
+        tools:layout="@layout/fragment_archive" >
+        <action
+            android:id="@+id/action_archiveFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_archiveFragment_to_openOrderFromArchiveFragment"
+            app:destination="@id/openOrderFromArchiveFragment" />
+    </fragment>
+
+    <!--CREATE NEW ORDER -->
+    <fragment
+        android:id="@+id/createNewOrderFragment"
+        android:name="net.denis.choriapp.ui.fragment.order.createNewOrder.CreateNewOrderFragment"
+        android:label="Добавление нового заказа"
+        tools:layout="@layout/fragment_create_new_order" >
+        <action
+            android:id="@+id/action_createNewOrderFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <!-- UPDATE ORDERS -->
+    <fragment
+        android:id="@+id/updateOrderFragment"
+        android:name="net.denis.choriapp.ui.fragment.order.updateOrder.UpdateOrderFragment"
+        android:label="Редактирование"
+        tools:layout="@layout/fragment_update_order" >
+        <action
+            android:id="@+id/action_updateOrderFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <argument
+            android:name="order"
+            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/openOrderFromArchiveFragment"
+        android:name="net.denis.choriapp.ui.fragment.order.OpenOrderFromArchiveFragment"
+        android:label="OpenOrderFromArchiveFragment" >
+        <action
+            android:id="@+id/action_openOrderFromArchiveFragment_to_archiveFragment"
+            app:destination="@id/archiveFragment" />
+        <argument android:name="orderFromArchive"
+            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+    </fragment>
+</navigation>
