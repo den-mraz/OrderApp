@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_dashboard.*
 import net.denis.orderapp.R
 import net.denis.orderapp.databinding.FragmentDashboardBinding
 import net.denis.orderapp.ui.adapter.dashboard.DashboardAdapter

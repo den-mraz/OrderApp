@@ -22,10 +22,10 @@ abstract class AppDatabase : RoomDatabase() {
 
         fun getDatabase(context: Context): AppDatabase {
             val tempInstance = INSTANCE
-            if (tempInstance!= null) {
+            if (tempInstance != null) {
                 return tempInstance
             }
-            synchronized(this){
+            synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
@@ -37,20 +37,4 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 
-    /*
-    companion object {
-        private var database: AppDatabase? = null
-
-        @Synchronized
-        fun newInstance(context: Context): AppDatabase {
-            return if (database == null) {
-                database = Room.databaseBuilder(context, AppDatabase::class.java, "db").build()
-                database as AppDatabase
-            } else {
-                database as AppDatabase
-            }
-        }
-    }
-
-     */
 }

@@ -79,5 +79,4 @@ class UpdateOrderFragment : Fragment(), Helper {
         }
     }
 
-
 }

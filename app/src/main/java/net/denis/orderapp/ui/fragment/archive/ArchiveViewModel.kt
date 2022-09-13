@@ -26,4 +26,5 @@ class ArchiveViewModel(application: Application) : AndroidViewModel(application)
             repositoryImpl.updateOrder(orderDbEntity)
         }
     }
+
 }

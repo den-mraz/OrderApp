@@ -27,12 +27,10 @@ class CreateNewOrderFragment : Fragment() {
     ): View {
         binding = FragmentCreateNewOrderBinding.inflate(inflater, container, false)
 
-
         createNewOrderViewModel = ViewModelProvider(this).get(CreateNewOrderViewModel::class.java)
         binding.btnCreateNewOrder.setOnClickListener {
             insertDataToDB()
         }
-
         return binding.root
     }
 
@@ -67,8 +65,6 @@ class CreateNewOrderFragment : Fragment() {
         } catch (e: Exception) {
             Toast.makeText(requireContext(), "Заполните данные", Toast.LENGTH_LONG).show()
         }
-
-
     }
 
 }
