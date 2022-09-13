@@ -13,4 +13,5 @@
     <string name="Dashboard">Заказы</string>
     <string name="Archive">Архив</string>
     <string name="dateStart">Дата приёма</string>
+    <string name="Storage">Склад</string>
 </resources>

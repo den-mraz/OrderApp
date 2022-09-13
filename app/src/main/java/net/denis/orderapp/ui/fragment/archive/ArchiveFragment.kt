@@ -41,9 +41,6 @@ class ArchiveFragment : Fragment() {
             adapter.setData(archive)
         })
 
-        binding.btnOpenDashboard.setOnClickListener {
-            findNavController().navigate(R.id.action_archiveFragment_to_dashboardFragment)
-        }
 
         /** Swipe to move order from archive in dashboard */
         val itemTouchHelperMoveToDashboardCallback = object : ItemTouchHelper.SimpleCallback(

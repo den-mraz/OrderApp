@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="@string/Dashboard"
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item
+        android:id="@+id/archiveFragment"
+        android:title="@string/Archive"
+        android:icon="@drawable/ic_archive"/>
+
+    <item
+        android:id="@+id/storageFragment"
+        android:title="@string/Storage"
+        android:icon="@drawable/ic_storage"/>
+
+
+
+
+
+</menu>
