@@ -27,20 +27,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(findNavController(R.id.fragment))
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menuBtnCreateNewOrder -> {
-                findNavController(R.id.fragment).navigate(R.id.action_dashboardFragment_to_createNewOrderFragment)
-                true
-            }
-            else -> {super.onOptionsItemSelected(item)}
-        }
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragment)
         return super.onSupportNavigateUp() || navController.navigateUp()

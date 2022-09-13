@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,8 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        setHasOptionsMenu(true)
 
         val adapter = DashboardAdapter()
         val recyclerView = binding.rvDashboardFragment
@@ -123,9 +126,20 @@ class DashboardFragment : Fragment() {
             adapter.setData(dashboard)
         })
 
-
         return binding.root
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.top_menu, menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menuBtnCreateNewOrder -> {
+                findNavController().navigate(R.id.action_dashboardFragment_to_createNewOrderFragment)
+                true
+            }
+            else -> {super.onOptionsItemSelected(item)}
+        }
+    }
 }
