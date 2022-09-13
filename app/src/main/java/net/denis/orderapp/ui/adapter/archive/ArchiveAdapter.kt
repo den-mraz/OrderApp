@@ -6,10 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_update_order.*
-import kotlinx.android.synthetic.main.fragment_update_order.view.*
 import kotlinx.android.synthetic.main.item_layout_archive.view.*
-import kotlinx.android.synthetic.main.item_layout_dashboard.view.*
 import net.denis.orderapp.R
 import net.denis.orderapp.ui.fragment.archive.ArchiveFragmentDirections
 import net.denis.orderapp.util.Helper
@@ -31,7 +28,6 @@ class ArchiveAdapter : RecyclerView.Adapter<ArchiveAdapter.ArchiveViewHolder>(),
     override fun onBindViewHolder(holder: ArchiveViewHolder, position: Int) {
         val currentArchiveOrder = archiveList[position]
         holder.itemView.apply {
-
             item_archive_nameProduct.text = currentArchiveOrder.nameProduct
             item_archive_customerName.text = currentArchiveOrder.customerName
             item_archive_phoneNumber.text = currentArchiveOrder.phoneNumber
@@ -44,7 +40,6 @@ class ArchiveAdapter : RecyclerView.Adapter<ArchiveAdapter.ArchiveViewHolder>(),
         }
 
     }
-
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(archive: List<OrderDbEntity>) {

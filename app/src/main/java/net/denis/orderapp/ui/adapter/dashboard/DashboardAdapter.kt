@@ -46,5 +46,4 @@ class DashboardAdapter : RecyclerView.Adapter<DashboardAdapter.DashboardViewHold
         notifyDataSetChanged()
     }
 
-
 }
