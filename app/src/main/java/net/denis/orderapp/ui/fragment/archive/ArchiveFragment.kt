@@ -12,12 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_update_order.*
 import net.denis.orderapp.R
 import net.denis.orderapp.databinding.FragmentArchiveBinding
 import net.denis.orderapp.ui.adapter.archive.ArchiveAdapter
 import net.denis.data.model.room.entities.OrderDbEntity
-import java.util.*
 
 class ArchiveFragment : Fragment() {
 
@@ -41,9 +39,6 @@ class ArchiveFragment : Fragment() {
             adapter.setData(archive)
         })
 
-        binding.btnOpenDashboard.setOnClickListener {
-            findNavController().navigate(R.id.action_archiveFragment_to_dashboardFragment)
-        }
 
         /** Swipe to move order from archive in dashboard */
         val itemTouchHelperMoveToDashboardCallback = object : ItemTouchHelper.SimpleCallback(
@@ -92,9 +87,7 @@ class ArchiveFragment : Fragment() {
         ItemTouchHelper(itemTouchHelperMoveToDashboardCallback).apply {
             attachToRecyclerView(binding.rvArchiveFragment)
         }
-
         return binding.root
-
     }
 
 }
