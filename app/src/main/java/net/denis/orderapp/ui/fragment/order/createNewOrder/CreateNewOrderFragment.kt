@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import net.denis.orderapp.R
 import net.denis.orderapp.databinding.FragmentCreateNewOrderBinding
 import net.denis.orderapp.util.SDF
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.entities.order.OrderDbEntity
 import java.util.Date
 
 class CreateNewOrderFragment : Fragment() {

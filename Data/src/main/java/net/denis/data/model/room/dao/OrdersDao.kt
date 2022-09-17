@@ -1,8 +1,8 @@
-package net.denis.data.model.room
+package net.denis.data.model.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.entities.order.OrderDbEntity
 
 @Dao
 interface OrdersDao {

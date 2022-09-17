@@ -1,8 +1,8 @@
-package net.denis.data.repository
+package net.denis.data.repository.OrderRepository
 
 import androidx.lifecycle.LiveData
-import net.denis.data.model.room.OrdersDao
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.dao.OrdersDao
+import net.denis.data.model.room.entities.order.OrderDbEntity
 
 class RoomOrderRepositoryImpl(
     private val ordersDao: OrdersDao

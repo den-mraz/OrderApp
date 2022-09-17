@@ -1,4 +1,4 @@
-package net.denis.data.repository
+package net.denis.data.repository.OrderRepository
 /*
 
 import androidx.lifecycle.LiveData

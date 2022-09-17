@@ -4,7 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.entities.order.OrderDbEntity
+import net.denis.data.model.room.dao.OrdersDao
 
 @Database(
     entities = [

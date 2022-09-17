@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.item_layout_archive.view.*
 import net.denis.orderapp.R
 import net.denis.orderapp.ui.fragment.archive.ArchiveFragmentDirections
 import net.denis.orderapp.util.Helper
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.entities.order.OrderDbEntity
 
 class ArchiveAdapter : RecyclerView.Adapter<ArchiveAdapter.ArchiveViewHolder>(), Helper {
 

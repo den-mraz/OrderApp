@@ -1,4 +1,4 @@
-package net.denis.data.model.room.entities
+package net.denis.data.model.room.entities.order
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

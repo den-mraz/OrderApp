@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_layout_dashboard.view.*
 import net.denis.orderapp.R
 import net.denis.orderapp.ui.fragment.dashboard.DashboardFragmentDirections
-import net.denis.data.model.room.entities.OrderDbEntity
+import net.denis.data.model.room.entities.order.OrderDbEntity
 
 class DashboardAdapter : RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
 

@@ -7,8 +7,8 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import net.denis.data.model.room.AppDatabase
-import net.denis.data.model.room.entities.OrderDbEntity
-import net.denis.data.repository.RoomOrderRepositoryImpl
+import net.denis.data.model.room.entities.order.OrderDbEntity
+import net.denis.data.repository.OrderRepository.RoomOrderRepositoryImpl
 
 class DashboardViewModel(application: Application) : AndroidViewModel(application) {
 
