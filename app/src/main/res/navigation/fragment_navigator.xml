@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigator"
+    android:id="@+id/main_navigation"
     app:startDestination="@id/dashboardFragment">
 
     <!--DASHBOARD -->
@@ -34,7 +34,10 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="order"
-            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+            app:argType="net.denis.data.model.room.entities.order.OrderDbEntity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_storage_navigation"
+            app:destination="@id/storage_navigation" />
     </fragment>
 
     <!--ARCHIVE -->
@@ -89,14 +92,14 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="order"
-            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+            app:argType="net.denis.data.model.room.entities.order.OrderDbEntity" />
     </fragment>
 
     <!-- ARCHIVE ORDER DETAILS -->
     <fragment
         android:id="@+id/openOrderFromArchiveFragment"
         android:name="net.denis.orderapp.ui.fragment.order.OpenOrderFromArchiveFragment"
-        android:label="OpenOrderFromArchiveFragment" >
+        android:label="Детали заказа" >
         <action
             android:id="@+id/action_openOrderFromArchiveFragment_to_archiveFragment"
             app:destination="@id/archiveFragment"
@@ -105,6 +108,16 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
         <argument android:name="orderFromArchive"
-            app:argType="net.denis.data.model.room.entities.OrderDbEntity" />
+            app:argType="net.denis.data.model.room.entities.order.OrderDbEntity" />
     </fragment>
+
+    <navigation android:id="@+id/storage_navigation"
+        app:startDestination="@id/storageFragment">
+        <fragment
+            android:id="@+id/storageFragment"
+            android:name="net.denis.orderapp.ui.fragment.storage.StorageFragment"
+            android:label="fragment_storage"
+            tools:layout="@layout/fragment_storage" />
+    </navigation>
+
 </navigation>
