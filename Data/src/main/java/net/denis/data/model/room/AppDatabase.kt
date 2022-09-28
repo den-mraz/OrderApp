@@ -6,16 +6,20 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import net.denis.data.model.room.entities.order.OrderDbEntity
 import net.denis.data.model.room.dao.OrdersDao
+import net.denis.data.model.room.dao.StorageDao
+import net.denis.data.model.room.entities.storage.category.CategoryToolEntity
 
 @Database(
     entities = [
-        OrderDbEntity::class
+        OrderDbEntity::class,
+        CategoryToolEntity::class
     ],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun ordersDao(): OrdersDao
+    abstract fun storageDao(): StorageDao
 
     companion object {
         @Volatile

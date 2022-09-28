@@ -4,15 +4,15 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_layout_category.view.*
-import net.denis.data.model.room.entities.storage.category.CategoryEntity
+import net.denis.data.model.room.entities.storage.category.CategoryToolEntity
 import net.denis.orderapp.R
+import net.denis.orderapp.util.Helper
 
-class StorageAdapter : RecyclerView.Adapter<StorageAdapter.StorageViewHolder>() {
+class StorageAdapter : RecyclerView.Adapter<StorageAdapter.StorageViewHolder>(), Helper {
 
-    var categoryList = emptyList<CategoryEntity>()
+    var categoryList = emptyList<CategoryToolEntity>()
 
     class StorageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -26,19 +26,18 @@ class StorageAdapter : RecyclerView.Adapter<StorageAdapter.StorageViewHolder>() 
     override fun onBindViewHolder(holder: StorageViewHolder, position: Int) {
         val currentCategoryItem = categoryList[position]
         holder.itemView.apply {
-            item_category_name.text = currentCategoryItem.nameCategory
+            item_category_name.text = currentCategoryItem.nameCategoryTool
 
-           /* holder.itemView.item_category_name.setOnClickListener {
-                val action = DashboardFragmentDirections.actionDashboardFragmentToUpdateOrderFragment(currentDashboardItem)
-                holder.itemView.findNavController().navigate(action)
-            }*/
+            holder.itemView.item_category_name.setOnClickListener {
+               makeToast(context, "${currentCategoryItem.id}")
+            }
 
         }
 
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(category: List<CategoryEntity>) {
+    fun setData(category: List<CategoryToolEntity>) {
         this.categoryList = category
         notifyDataSetChanged()
     }

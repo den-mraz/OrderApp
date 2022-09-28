@@ -12,12 +12,8 @@
         android:icon="@drawable/ic_archive"/>
 
     <item
-        android:id="@+id/storageFragment"
+        android:id="@+id/storage_navigation"
         android:title="@string/Storage"
         android:icon="@drawable/ic_storage"/>
-
-
-
-
 
 </menu>

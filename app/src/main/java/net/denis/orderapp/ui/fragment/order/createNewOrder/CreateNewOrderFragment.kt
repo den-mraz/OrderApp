@@ -5,16 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import net.denis.orderapp.R
 import net.denis.orderapp.databinding.FragmentCreateNewOrderBinding
 import net.denis.orderapp.util.SDF
 import net.denis.data.model.room.entities.order.OrderDbEntity
+import net.denis.orderapp.util.Helper
 import java.util.Date
 
-class CreateNewOrderFragment : Fragment() {
+class CreateNewOrderFragment : Fragment(), Helper {
 
     private lateinit var binding: FragmentCreateNewOrderBinding
 
@@ -25,7 +25,11 @@ class CreateNewOrderFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCreateNewOrderBinding.inflate(inflater, container, false)
+        binding = FragmentCreateNewOrderBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         createNewOrderViewModel = ViewModelProvider(this).get(CreateNewOrderViewModel::class.java)
         binding.btnCreateNewOrder.setOnClickListener {
@@ -59,11 +63,11 @@ class CreateNewOrderFragment : Fragment() {
             )
 
             createNewOrderViewModel.createNewOrder(orderDbEntity)
-            Toast.makeText(requireContext(), "Заказ создан", Toast.LENGTH_LONG).show()
+            makeToast(requireContext(), "Заказ создан")
             findNavController().navigate(R.id.action_createNewOrderFragment_to_dashboardFragment)
 
         } catch (e: Exception) {
-            Toast.makeText(requireContext(), "Заполните данные", Toast.LENGTH_LONG).show()
+            makeToast(requireContext(), "Заполните данные")
         }
     }
 

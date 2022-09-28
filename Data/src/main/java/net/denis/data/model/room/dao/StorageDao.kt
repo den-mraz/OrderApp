@@ -1,24 +1,24 @@
 package net.denis.data.model.room.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
-import net.denis.data.model.room.entities.storage.category.CategoryEntity
+import androidx.room.*
+import net.denis.data.model.room.entities.storage.category.CategoryToolEntity
 
+@Dao
 interface StorageDao {
 
     @Insert
-    suspend fun AddCategory(categoryEntity: CategoryEntity)
+    suspend fun AddCategoryTool(categoryToolEntity: CategoryToolEntity)
 
     @Delete
-    suspend fun DeleteAtCategory(categoryEntity: CategoryEntity)
+    suspend fun DeleteAtCategoryTool(categoryToolEntity: CategoryToolEntity)
 
     @Update
-    suspend fun UpdateCategory(categoryEntity: CategoryEntity)
+    suspend fun UpdateCategoryTool(categoryToolEntity: CategoryToolEntity)
 
-    @Query("SELECT * FROM 'category' ORDER BY name_category")
-    fun getCategory(): LiveData<List<CategoryEntity>>
+    @Query("SELECT * FROM 'category_tool' ORDER BY name_category_tool")
+    fun getCategory(): LiveData<List<CategoryToolEntity>>
+
+
 
 }

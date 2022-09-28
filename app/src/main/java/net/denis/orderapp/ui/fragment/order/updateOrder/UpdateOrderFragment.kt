@@ -18,7 +18,6 @@ import net.denis.data.model.room.entities.order.OrderDbEntity
 class UpdateOrderFragment : Fragment(), Helper {
 
     private lateinit var binding: FragmentUpdateOrderBinding
-
     private lateinit var dashboardViewModel : DashboardViewModel
 
     private val args by navArgs<UpdateOrderFragmentArgs>()
@@ -27,7 +26,7 @@ class UpdateOrderFragment : Fragment(), Helper {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentUpdateOrderBinding.inflate(inflater, container, false)
 
         binding.editTextUpdateNameProduct.setText(args.order.nameProduct)

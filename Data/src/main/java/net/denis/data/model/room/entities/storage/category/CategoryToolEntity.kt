@@ -6,12 +6,12 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity(
-    tableName = "category"
+    tableName = "category_tool"
 )
-data class CategoryEntity(
+data class CategoryToolEntity(
     @PrimaryKey(autoGenerate = true) val id: Long,
 
-    @ColumnInfo(collate = ColumnInfo.NOCASE, name = "name_category")
-    val nameCategory: String
+    @ColumnInfo(collate = ColumnInfo.NOCASE, name = "name_category_tool")
+    val nameCategoryTool: String
 
 ) : Serializable
