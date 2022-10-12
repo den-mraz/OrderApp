@@ -2,11 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btnAddCategory"
-        android:title="+ Категория" />
-
-    <item
         android:id="@+id/btnAddItem"
-        android:title="+ Элемент" />
+        android:title="+ Добавить" />
 
 </menu>
